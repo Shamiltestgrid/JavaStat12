@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
 
-    long[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    long[] purchases = {8, 15, 13, 15, 17, 20, 19, 21, 7, 14, 14, 18};
 
     @org.junit.jupiter.api.Test
     void totalSales() {
@@ -18,8 +18,8 @@ class StatsServiceTest {
     @org.junit.jupiter.api.Test
     void averagePrice() {
         StatsService service = new StatsService();
-        long expected = 15;
-        long actual = (long) service.averagePrice(purchases);
+        float expected = 15;
+        float actual = service.averagePrice(purchases);
         System.out.println("Average price = " + actual);
         assertEquals(expected, actual);
     }
