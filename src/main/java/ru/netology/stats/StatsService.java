@@ -11,7 +11,7 @@ public class StatsService {
     }
 
     public float averagePrice(long[] purchases) {
-        return totalSales(purchases) / purchases.length;
+        return totalSales(purchases) / (float) purchases.length;
     }
 
     public long maximumPrice(long[] purchases) {
